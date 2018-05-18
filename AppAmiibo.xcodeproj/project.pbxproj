@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9801C93E20ADC35300880785 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C93D20ADC35300880785 /* ServiceError.swift */; };
+		9801C94020ADC4F200880785 /* AmiiboService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C93F20ADC4F200880785 /* AmiiboService.swift */; };
+		9801C94220ADDB0900880785 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C94120ADDB0900880785 /* JSON.swift */; };
 		987B7DB820AC5A72002CE8D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DB720AC5A72002CE8D5 /* AppDelegate.swift */; };
 		987B7DBA20AC5A72002CE8D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DB920AC5A72002CE8D5 /* ViewController.swift */; };
 		987B7DBD20AC5A73002CE8D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987B7DBB20AC5A73002CE8D5 /* Main.storyboard */; };
@@ -14,6 +17,9 @@
 		987B7DC220AC5A73002CE8D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987B7DC020AC5A73002CE8D5 /* LaunchScreen.storyboard */; };
 		987B7DCD20AC5A73002CE8D5 /* AppAmiiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DCC20AC5A73002CE8D5 /* AppAmiiboTests.swift */; };
 		987B7DD820AC5A73002CE8D5 /* AppAmiiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DD720AC5A73002CE8D5 /* AppAmiiboUITests.swift */; };
+		987B7DE620AC6393002CE8D5 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DE520AC6393002CE8D5 /* Character.swift */; };
+		987B7DE920AC66D3002CE8D5 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DE820AC66D3002CE8D5 /* NetworkDispatcher.swift */; };
+		987B7DEB20AC6854002CE8D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DEA20AC6854002CE8D5 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9801C93D20ADC35300880785 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		9801C93F20ADC4F200880785 /* AmiiboService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboService.swift; sourceTree = "<group>"; };
+		9801C94120ADDB0900880785 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		987B7DB420AC5A72002CE8D5 /* AppAmiibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppAmiibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987B7DB720AC5A72002CE8D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		987B7DB920AC5A72002CE8D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		987B7DD320AC5A73002CE8D5 /* AppAmiiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppAmiiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		987B7DD720AC5A73002CE8D5 /* AppAmiiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAmiiboUITests.swift; sourceTree = "<group>"; };
 		987B7DD920AC5A73002CE8D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		987B7DE520AC6393002CE8D5 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		987B7DE820AC66D3002CE8D5 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		987B7DEA20AC6854002CE8D5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,15 @@
 		987B7DB620AC5A72002CE8D5 /* AppAmiibo */ = {
 			isa = PBXGroup;
 			children = (
+				987B7DE720AC6399002CE8D5 /* Service */,
 				987B7DB720AC5A72002CE8D5 /* AppDelegate.swift */,
 				987B7DB920AC5A72002CE8D5 /* ViewController.swift */,
 				987B7DBB20AC5A73002CE8D5 /* Main.storyboard */,
 				987B7DBE20AC5A73002CE8D5 /* Assets.xcassets */,
 				987B7DC020AC5A73002CE8D5 /* LaunchScreen.storyboard */,
 				987B7DC320AC5A73002CE8D5 /* Info.plist */,
+				987B7DE520AC6393002CE8D5 /* Character.swift */,
+				987B7DEA20AC6854002CE8D5 /* Constants.swift */,
 			);
 			path = AppAmiibo;
 			sourceTree = "<group>";
@@ -123,6 +138,17 @@
 				987B7DD920AC5A73002CE8D5 /* Info.plist */,
 			);
 			path = AppAmiiboUITests;
+			sourceTree = "<group>";
+		};
+		987B7DE720AC6399002CE8D5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				987B7DE820AC66D3002CE8D5 /* NetworkDispatcher.swift */,
+				9801C93D20ADC35300880785 /* ServiceError.swift */,
+				9801C93F20ADC4F200880785 /* AmiiboService.swift */,
+				9801C94120ADDB0900880785 /* JSON.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9801C94020ADC4F200880785 /* AmiiboService.swift in Sources */,
+				9801C93E20ADC35300880785 /* ServiceError.swift in Sources */,
+				987B7DEB20AC6854002CE8D5 /* Constants.swift in Sources */,
+				987B7DE620AC6393002CE8D5 /* Character.swift in Sources */,
 				987B7DBA20AC5A72002CE8D5 /* ViewController.swift in Sources */,
+				987B7DE920AC66D3002CE8D5 /* NetworkDispatcher.swift in Sources */,
 				987B7DB820AC5A72002CE8D5 /* AppDelegate.swift in Sources */,
+				9801C94220ADDB0900880785 /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

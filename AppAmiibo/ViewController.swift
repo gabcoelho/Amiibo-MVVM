@@ -10,8 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var character: Character!
+    var characters: [Character]?
+    var errorService: ServiceError?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        AmiiboService().getAmiiboList(completionHandler: {
+            (_ response: [Character]?, _ errorService: ServiceError?) in
+            if let response = response {
+                debugPrint("Response")
+                self.characters = response
+                print(self.characters ?? "character")
+            } else {
+                debugPrint("no characters")
+            }
+        })
         // Do any additional setup after loading the view, typically from a nib.
     }
 
