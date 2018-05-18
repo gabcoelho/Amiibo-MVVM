@@ -22,10 +22,10 @@ class AmiiboService {
         urlRequest = NetworkDispatcher.shared.createHTTPRequest(httpMethod: .get, url: url!,parameters: parameters)
         
         NetworkDispatcher.shared.dispatchResponse(urlRequest) {
-            (_ result: [Character]?, _ errorService: ServiceError?) in
+            (_ result: CharacterList?, _ errorService: ServiceError?) in
             if let result = result {
                 print(result)
-                completionHandler(result, nil)
+                completionHandler(result.characters, nil)
             } else {
                 completionHandler(nil, errorService)
             }

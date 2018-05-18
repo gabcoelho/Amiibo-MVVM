@@ -46,7 +46,7 @@ class NetworkDispatcher {
         task.resume()
     }
 
-    func dispatchResponse<T: Codable>(_ urlRequest: URLRequest, completionHandler: @escaping (_ result: [T]?, _ errorService: ServiceError?) -> Void) -> Void {
+    func dispatchResponse<T: Codable>(_ urlRequest: URLRequest, completionHandler: @escaping (_ result: T?, _ errorService: ServiceError?) -> Void) -> Void {
         let request = urlRequest
 
         dispatch(request) {
@@ -56,7 +56,7 @@ class NetworkDispatcher {
                 do {
                     let rawResponse = String(data: data, encoding: .utf8)
                     print(rawResponse ?? "no rawResponse")
-                    let resultObject = try JSONDecoder().decode([T].self, from: data)
+                    let resultObject = try JSONDecoder().decode(T.self, from: data)
                     print(resultObject)
                     completionHandler(resultObject, nil)
                 } catch {
@@ -64,7 +64,6 @@ class NetworkDispatcher {
                     completionHandler(nil, ServiceError.unableToDecode)
                 }
             }
-            debugPrint("Erro data != data")
         }
     }
 
