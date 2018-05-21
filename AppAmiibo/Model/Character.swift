@@ -12,11 +12,13 @@ struct Character: Codable {
     var name: String
     var amiiboSeries: String
     var gameSeries: String
+    var imagePath: String
     
     enum JSONKeys: String, CodingKey {
         case name = "name"
         case amiiboSeries = "amiiboSeries"
         case gameSeries = "gameSeries"
+        case imagePath = "image"
     }
 }
 
@@ -27,6 +29,7 @@ extension Character {
         try container.encode(name, forKey: .name)
         try container.encode(amiiboSeries, forKey: .amiiboSeries)
         try container.encode(gameSeries, forKey: .gameSeries)
+        try container.encode(imagePath, forKey: .imagePath)
     }
 
     init(from decoder: Decoder) throws {
@@ -34,5 +37,6 @@ extension Character {
         name = try container.decode(String.self, forKey: .name)
         amiiboSeries = try container.decode(String.self, forKey: .amiiboSeries)
         gameSeries = try container.decode(String.self, forKey: .gameSeries)
+        imagePath = try container.decode(String.self, forKey: .imagePath)
     }
 }

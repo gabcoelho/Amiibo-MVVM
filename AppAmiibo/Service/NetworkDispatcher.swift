@@ -57,47 +57,14 @@ class NetworkDispatcher {
                     let rawResponse = String(data: data, encoding: .utf8)
                     print(rawResponse ?? "no rawResponse")
                     let resultObject = try JSONDecoder().decode(T.self, from: data)
-                    print(resultObject)
+                    //print(resultObject)
                     completionHandler(resultObject, nil)
                 } catch {
-                    debugPrint("Erro dispatchResponse")
                     completionHandler(nil, ServiceError.unableToDecode)
                 }
             }
         }
     }
-
-
-//    func dispatchResponse<T: Codable>(_ urlResquest: URLRequest, completionHandler: @escaping (_ result: [T]?, _ errorService: ServiceError?) -> Void) -> Void {
-//         // completed completion: @escaping () -> Void)
-//        //let request = self.createHTTPRequest(httpMethod: httpMethod, url: url, parameters: parameters)
-//        let request = urlResquest
-//        let task = URLSession.shared.dataTask(with: request as URLRequest) {
-//            data, res, error in
-//            guard(error == nil) else {
-//                completionHandler(nil, ServiceError.requestError)
-//                return
-//            }
-//            if let data = data {
-//                do {
-//                    let resultObject = try JSONDecoder().decode([T].self, from: data)
-//                    print(resultObject)
-//                    completionHandler(resultObject, ServiceError.sucess)
-//
-//                } catch {
-//                    debugPrint("Errooo")
-//                    completionHandler(nil,ServiceError.unableToDecode)
-//
-//                }
-//            }
-//            debugPrint("whats going on")
-//            completionHandler(nil, ServiceError.unableToDecode)
-//
-//        }
-//        task.resume()
-//    }
-
-    
 }
 
 
