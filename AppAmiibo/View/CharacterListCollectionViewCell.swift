@@ -10,9 +10,12 @@ import UIKit
 
 class CharacterListCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - IBOutlets
     
     @IBOutlet weak var characterNameCollectionViewCell: UILabel!
     @IBOutlet weak var characterImageCollectionViewCell: UIImageView!
+    
+    // MARK: - ConfigureCellData
     
     func configureCell(character: Character) {
         let url = URL(string: character.imagePath)

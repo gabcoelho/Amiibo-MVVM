@@ -19,10 +19,6 @@ class AmiiboViewController: UIViewController{
     var character: Character!
     var characters = [Character]()
     
-//    var amiiboTableVC: AmiiboTableViewController!
-//    var amiiboCollectionVC: AmiiboCollectionViewController!
-    var amiiboVC: AmiiboViewController!
-    
     
     // MARK: - IBOutlets
     
@@ -30,12 +26,9 @@ class AmiiboViewController: UIViewController{
     @IBOutlet weak var characterNameLabel: UILabel!
     @IBOutlet weak var characterGameSeriesLabel: UILabel!
     @IBOutlet weak var characterAmiiboSeriesLabel: UILabel!
-    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
     @IBOutlet weak var tableContainerView: UIView!
     @IBOutlet weak var collectionContainerView: UIView!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
@@ -49,7 +42,7 @@ class AmiiboViewController: UIViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     func setup(){
         loadCharacters()
         while self.characters.count == 0 {
@@ -60,7 +53,8 @@ class AmiiboViewController: UIViewController{
         self.activityIndicator.stopAnimating()
     }
     
-
+    // MARK: - Getting Data
+    
     func loadCharacters(){
         listOfCharacters(success: {(response) in
             if let response = response {
@@ -86,6 +80,17 @@ class AmiiboViewController: UIViewController{
             completion?()
         }
     )}
+  
+    func updateViewControllerData(character: Character) {
+        characterNameLabel.text = character.name
+        characterAmiiboSeriesLabel.text = character.amiiboSeries
+        characterGameSeriesLabel.text = character.gameSeries
+        let url = URL(string: character.imagePath)
+        characterImage.kf.setImage(with: url)
+    }
+    
+    
+    // MARK: - Segmented Control Functions
     
     @IBAction func showContainer(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
@@ -101,7 +106,7 @@ class AmiiboViewController: UIViewController{
             break
         }
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AmiiboTableViewController" {
             if let table = segue.destination as? AmiiboTableViewController {
@@ -116,15 +121,6 @@ class AmiiboViewController: UIViewController{
             }
         }
     }
-  
-    func updateViewControllerData(character: Character) {
-        characterNameLabel.text = character.name
-        characterAmiiboSeriesLabel.text = character.amiiboSeries
-        characterGameSeriesLabel.text = character.gameSeries
-        let url = URL(string: character.imagePath)
-        characterImage.kf.setImage(with: url)
-    }
-
 }
 
 
@@ -156,6 +152,7 @@ extension AmiiboViewController: AmiiboTableViewControllerDelegate {
         updateViewControllerData(character: character)
     }
 }
+
 
 // MARK: - AmiiboCollectionViewControllerDataSource
 

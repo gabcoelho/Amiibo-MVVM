@@ -67,7 +67,6 @@ extension AmiiboCollectionViewController: UICollectionViewDelegate {
 
 // MARK: - CollectionViewFlowLayout
 
-
 extension AmiiboCollectionViewController: UICollectionViewDelegateFlowLayout {
 
     //Size of one cell

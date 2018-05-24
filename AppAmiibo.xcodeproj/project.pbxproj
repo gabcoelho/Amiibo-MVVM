@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5A21BE6ECDCA8FB6AFB619FC /* Pods_AppAmiibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C640CD20FAAA1D8831264B24 /* Pods_AppAmiibo.framework */; };
-		98004A2B20B43B8000B2B069 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98004A2A20B43B8000B2B069 /* Protocols.swift */; };
 		9801C93E20ADC35300880785 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C93D20ADC35300880785 /* ServiceError.swift */; };
 		9801C94020ADC4F200880785 /* AmiiboService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C93F20ADC4F200880785 /* AmiiboService.swift */; };
 		9801C94220ADDB0900880785 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C94120ADDB0900880785 /* JSON.swift */; };
@@ -48,7 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		98004A2A20B43B8000B2B069 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		9801C93D20ADC35300880785 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		9801C93F20ADC4F200880785 /* AmiiboService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboService.swift; sourceTree = "<group>"; };
 		9801C94120ADDB0900880785 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				987B7DBE20AC5A73002CE8D5 /* Assets.xcassets */,
 				987B7DC020AC5A73002CE8D5 /* LaunchScreen.storyboard */,
 				987B7DC320AC5A73002CE8D5 /* Info.plist */,
-				98004A2A20B43B8000B2B069 /* Protocols.swift */,
 			);
 			path = AppAmiibo;
 			sourceTree = "<group>";
@@ -392,7 +389,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98004A2B20B43B8000B2B069 /* Protocols.swift in Sources */,
 				9801C94020ADC4F200880785 /* AmiiboService.swift in Sources */,
 				9802643A20B0CCFD00CE954A /* CharacterListTableViewCell.swift in Sources */,
 				98FE133B20B2FE0A00B790AA /* CharacterListCollectionViewCell.swift in Sources */,

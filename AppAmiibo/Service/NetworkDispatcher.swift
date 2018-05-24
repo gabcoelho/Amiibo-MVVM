@@ -63,7 +63,6 @@ class NetworkDispatcher {
                     completionHandler(nil, ServiceError.unableToDecode)
                 }
             }
-
         }
     }
 }
