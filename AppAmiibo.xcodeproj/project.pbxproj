@@ -11,7 +11,6 @@
 		9801C93E20ADC35300880785 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C93D20ADC35300880785 /* ServiceError.swift */; };
 		9801C94020ADC4F200880785 /* AmiiboService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C93F20ADC4F200880785 /* AmiiboService.swift */; };
 		9801C94220ADDB0900880785 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C94120ADDB0900880785 /* JSON.swift */; };
-		9802643820B0C86500CE954A /* AmiiboViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802643720B0C86500CE954A /* AmiiboViewModel.swift */; };
 		9802643A20B0CCFD00CE954A /* CharacterListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802643920B0CCFD00CE954A /* CharacterListTableViewCell.swift */; };
 		9802643C20B0CFAA00CE954A /* AmiiboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802643B20B0CFAA00CE954A /* AmiiboViewController.swift */; };
 		9812814520AF3A3000C7E2EC /* CharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812814420AF3A3000C7E2EC /* CharacterList.swift */; };
@@ -50,7 +49,6 @@
 		9801C93D20ADC35300880785 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		9801C93F20ADC4F200880785 /* AmiiboService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboService.swift; sourceTree = "<group>"; };
 		9801C94120ADDB0900880785 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		9802643720B0C86500CE954A /* AmiiboViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboViewModel.swift; sourceTree = "<group>"; };
 		9802643920B0CCFD00CE954A /* CharacterListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListTableViewCell.swift; sourceTree = "<group>"; };
 		9802643B20B0CFAA00CE954A /* AmiiboViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboViewController.swift; sourceTree = "<group>"; };
 		9812814420AF3A3000C7E2EC /* CharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterList.swift; sourceTree = "<group>"; };
@@ -122,14 +120,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9802643520B08C3400CE954A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				9802643720B0C86500CE954A /* AmiiboViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		9802643620B08C4200CE954A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				9802643620B08C4200CE954A /* View */,
-				9802643520B08C3400CE954A /* ViewModel */,
 				9802643320B08C2200CE954A /* Model */,
 				987B7DE720AC6399002CE8D5 /* Service */,
 				987B7DB720AC5A72002CE8D5 /* AppDelegate.swift */,
@@ -394,7 +383,6 @@
 				98FE133B20B2FE0A00B790AA /* CharacterListCollectionViewCell.swift in Sources */,
 				98FE133720B2FDE100B790AA /* AmiiboTableViewController.swift in Sources */,
 				9802643C20B0CFAA00CE954A /* AmiiboViewController.swift in Sources */,
-				9802643820B0C86500CE954A /* AmiiboViewModel.swift in Sources */,
 				98FE133920B2FDF500B790AA /* AmiiboCollectionViewController.swift in Sources */,
 				9801C93E20ADC35300880785 /* ServiceError.swift in Sources */,
 				987B7DEB20AC6854002CE8D5 /* Constants.swift in Sources */,

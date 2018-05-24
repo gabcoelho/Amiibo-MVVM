@@ -10,21 +10,12 @@ import UIKit
 
 class CharacterListTableViewCell: UITableViewCell {
 
-    //MARK: Properties
+    //MARK: - IBOutlets
     
     @IBOutlet weak var characterNameTableViewCell: UILabel!
     @IBOutlet weak var characterImageTableViewCell: UIImageView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    // MARK: - ConfigureCellData
     
     func configureCell(character: Character) {
         let url = URL(string: character.imagePath)

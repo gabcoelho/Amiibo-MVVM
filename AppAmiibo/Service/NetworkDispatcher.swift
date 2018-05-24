@@ -22,7 +22,6 @@ class NetworkDispatcher {
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
         if let parameters = parameters {
-            //request.httpBody
             _ = JSON.deserialize(data: parameters)
         }
         return request
@@ -57,7 +56,6 @@ class NetworkDispatcher {
                     let rawResponse = String(data: data, encoding: .utf8)
                     print(rawResponse ?? "no rawResponse")
                     let resultObject = try JSONDecoder().decode(T.self, from: data)
-                    //print(resultObject)
                     completionHandler(resultObject, nil)
                 } catch {
                     completionHandler(nil, ServiceError.unableToDecode)

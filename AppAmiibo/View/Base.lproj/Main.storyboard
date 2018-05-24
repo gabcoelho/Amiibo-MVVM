@@ -242,46 +242,44 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e9W-xX-aIW">
-                                    <size key="itemSize" width="126" height="125"/>
+                                    <size key="itemSize" width="140" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterListCollectionViewCell" id="YE0-vg-1jA" customClass="CharacterListCollectionViewCell" customModule="AppAmiibo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="126" height="125"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="126" height="125"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruo-NX-Jsi">
-                                                    <rect key="frame" x="12" y="7" width="101" height="85"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="101" id="A75-i0-OKa"/>
-                                                        <constraint firstAttribute="height" constant="85" id="ojK-nA-ck1"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4B-7o-6ws">
-                                                    <rect key="frame" x="40.5" y="95" width="45" height="21"/>
+                                                    <rect key="frame" x="50" y="110" width="40.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="uQW-KP-7MK"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruo-NX-Jsi">
+                                                    <rect key="frame" x="12" y="11" width="116" height="97"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="97" id="ecR-gv-caG"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="s4B-7o-6ws" secondAttribute="bottom" constant="9" id="5pn-im-2M1"/>
-                                            <constraint firstItem="s4B-7o-6ws" firstAttribute="top" secondItem="ruo-NX-Jsi" secondAttribute="bottom" constant="3" id="L6J-Hm-Tx5"/>
-                                            <constraint firstItem="s4B-7o-6ws" firstAttribute="centerX" secondItem="YE0-vg-1jA" secondAttribute="centerX" id="Y6F-4q-7mo"/>
-                                            <constraint firstItem="ruo-NX-Jsi" firstAttribute="top" secondItem="YE0-vg-1jA" secondAttribute="top" constant="7" id="bDr-F2-ydY"/>
-                                            <constraint firstAttribute="trailing" secondItem="ruo-NX-Jsi" secondAttribute="trailing" constant="13" id="eLc-t8-UPr"/>
-                                            <constraint firstItem="ruo-NX-Jsi" firstAttribute="leading" secondItem="YE0-vg-1jA" secondAttribute="leading" constant="12" id="nDM-ZF-L3o"/>
+                                            <constraint firstItem="s4B-7o-6ws" firstAttribute="centerX" secondItem="YE0-vg-1jA" secondAttribute="centerX" id="BRp-1N-YAs"/>
+                                            <constraint firstItem="s4B-7o-6ws" firstAttribute="top" secondItem="ruo-NX-Jsi" secondAttribute="bottom" constant="2" id="Drg-Aa-Nvl"/>
+                                            <constraint firstItem="ruo-NX-Jsi" firstAttribute="leading" secondItem="YE0-vg-1jA" secondAttribute="leadingMargin" constant="4" id="Jbi-G8-cpr"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ruo-NX-Jsi" secondAttribute="trailing" constant="4" id="QzW-OQ-XcV"/>
+                                            <constraint firstItem="ruo-NX-Jsi" firstAttribute="top" secondItem="YE0-vg-1jA" secondAttribute="topMargin" constant="3" id="jKn-fH-FJI"/>
                                         </constraints>
-                                        <size key="customSize" width="126" height="125"/>
+                                        <size key="customSize" width="140" height="140"/>
                                         <connections>
                                             <outlet property="characterImageCollectionViewCell" destination="ruo-NX-Jsi" id="KYf-uH-9XQ"/>
                                             <outlet property="characterNameCollectionViewCell" destination="s4B-7o-6ws" id="K6y-T4-NrS"/>

@@ -71,14 +71,14 @@ extension AmiiboCollectionViewController: UICollectionViewDelegateFlowLayout {
 
     //Size of one cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 126, height: 125)
+        return CGSize(width: 140, height: 140)
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let frame: CGRect = self.view.frame
-        let margin = (frame.width - 126 * 2)/3
-        return UIEdgeInsetsMake(10, margin, 10, margin)
+        let margin = (frame.width - 140 * 2)/3
+        return UIEdgeInsetsMake(5, margin, 5, margin)
     }
     
 }
