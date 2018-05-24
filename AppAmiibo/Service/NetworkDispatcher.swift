@@ -46,7 +46,7 @@ class NetworkDispatcher {
         task.resume()
     }
 
-    func dispatchResponse<T: Codable>(_ urlRequest: URLRequest, completionHandler: @escaping (_ result: T?, _ errorService: ServiceError?) -> Void) -> Void {
+    func dispatchResponse<T: Codable>(_ urlRequest: URLRequest, completionHandler: @escaping (_ result: T?, _ errorService: ServiceError?) -> Void) {
         let request = urlRequest
 
         dispatch(request) {
@@ -63,6 +63,7 @@ class NetworkDispatcher {
                     completionHandler(nil, ServiceError.unableToDecode)
                 }
             }
+
         }
     }
 }
