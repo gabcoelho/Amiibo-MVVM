@@ -1,6 +1,6 @@
 //
 //  CharacterList.swift
-//  AppAmiibo
+//  AmiiboMVVM
 //
 //  Created by Gabriela Coelho on 18/05/18.
 //  Copyright © 2018 Gabriela Coelho. All rights reserved.

@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A21BE6ECDCA8FB6AFB619FC /* Pods_AppAmiibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C640CD20FAAA1D8831264B24 /* Pods_AppAmiibo.framework */; };
+		23A84F7E2B682571ECDEC6A8 /* Pods_AmiiboMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C9C289A7B933E0C36E97B0 /* Pods_AmiiboMVVM.framework */; };
 		9801C93E20ADC35300880785 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C93D20ADC35300880785 /* ServiceError.swift */; };
 		9801C94020ADC4F200880785 /* AmiiboService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C93F20ADC4F200880785 /* AmiiboService.swift */; };
 		9801C94220ADDB0900880785 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C94120ADDB0900880785 /* JSON.swift */; };
 		9802643A20B0CCFD00CE954A /* CharacterListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802643920B0CCFD00CE954A /* CharacterListTableViewCell.swift */; };
 		9802643C20B0CFAA00CE954A /* AmiiboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802643B20B0CFAA00CE954A /* AmiiboViewController.swift */; };
+		980A94AF20BEB63E005311E1 /* CharacterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A94AE20BEB63E005311E1 /* CharacterCellViewModel.swift */; };
 		9812814520AF3A3000C7E2EC /* CharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812814420AF3A3000C7E2EC /* CharacterList.swift */; };
 		9814B71020B710FD001D48D9 /* AmiiboViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9814B70F20B710FD001D48D9 /* AmiiboViewModel.swift */; };
 		987B7DB820AC5A72002CE8D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DB720AC5A72002CE8D5 /* AppDelegate.swift */; };
 		987B7DBD20AC5A73002CE8D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987B7DBB20AC5A73002CE8D5 /* Main.storyboard */; };
 		987B7DBF20AC5A73002CE8D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 987B7DBE20AC5A73002CE8D5 /* Assets.xcassets */; };
 		987B7DC220AC5A73002CE8D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987B7DC020AC5A73002CE8D5 /* LaunchScreen.storyboard */; };
-		987B7DCD20AC5A73002CE8D5 /* AppAmiiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DCC20AC5A73002CE8D5 /* AppAmiiboTests.swift */; };
-		987B7DD820AC5A73002CE8D5 /* AppAmiiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DD720AC5A73002CE8D5 /* AppAmiiboUITests.swift */; };
+		987B7DCD20AC5A73002CE8D5 /* AmiiboMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DCC20AC5A73002CE8D5 /* AmiiboMVVMTests.swift */; };
+		987B7DD820AC5A73002CE8D5 /* AmiiboMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DD720AC5A73002CE8D5 /* AmiiboMVVMUITests.swift */; };
 		987B7DE620AC6393002CE8D5 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DE520AC6393002CE8D5 /* Character.swift */; };
 		987B7DE920AC66D3002CE8D5 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DE820AC66D3002CE8D5 /* NetworkDispatcher.swift */; };
 		987B7DEB20AC6854002CE8D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B7DEA20AC6854002CE8D5 /* Constants.swift */; };
@@ -52,19 +53,20 @@
 		9801C94120ADDB0900880785 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		9802643920B0CCFD00CE954A /* CharacterListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListTableViewCell.swift; sourceTree = "<group>"; };
 		9802643B20B0CFAA00CE954A /* AmiiboViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboViewController.swift; sourceTree = "<group>"; };
+		980A94AE20BEB63E005311E1 /* CharacterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellViewModel.swift; sourceTree = "<group>"; };
 		9812814420AF3A3000C7E2EC /* CharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterList.swift; sourceTree = "<group>"; };
 		9814B70F20B710FD001D48D9 /* AmiiboViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboViewModel.swift; sourceTree = "<group>"; };
-		987B7DB420AC5A72002CE8D5 /* AppAmiibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppAmiibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		987B7DB420AC5A72002CE8D5 /* AmiiboMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmiiboMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987B7DB720AC5A72002CE8D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		987B7DBC20AC5A73002CE8D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		987B7DBE20AC5A73002CE8D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		987B7DC120AC5A73002CE8D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		987B7DC320AC5A73002CE8D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		987B7DC820AC5A73002CE8D5 /* AppAmiiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppAmiiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		987B7DCC20AC5A73002CE8D5 /* AppAmiiboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAmiiboTests.swift; sourceTree = "<group>"; };
+		987B7DC820AC5A73002CE8D5 /* AmiiboMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmiiboMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		987B7DCC20AC5A73002CE8D5 /* AmiiboMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboMVVMTests.swift; sourceTree = "<group>"; };
 		987B7DCE20AC5A73002CE8D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		987B7DD320AC5A73002CE8D5 /* AppAmiiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppAmiiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		987B7DD720AC5A73002CE8D5 /* AppAmiiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAmiiboUITests.swift; sourceTree = "<group>"; };
+		987B7DD320AC5A73002CE8D5 /* AmiiboMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmiiboMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		987B7DD720AC5A73002CE8D5 /* AmiiboMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboMVVMUITests.swift; sourceTree = "<group>"; };
 		987B7DD920AC5A73002CE8D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		987B7DE520AC6393002CE8D5 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		987B7DE820AC66D3002CE8D5 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
@@ -73,7 +75,10 @@
 		98FE133820B2FDF500B790AA /* AmiiboCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboCollectionViewController.swift; sourceTree = "<group>"; };
 		98FE133A20B2FE0A00B790AA /* CharacterListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCollectionViewCell.swift; sourceTree = "<group>"; };
 		9B3E9B99B0A7D924B460B050 /* Pods-AppAmiibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAmiibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppAmiibo/Pods-AppAmiibo.debug.xcconfig"; sourceTree = "<group>"; };
+		A1329DA44912B88CC253842C /* Pods-AmiiboMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmiiboMVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-AmiiboMVVM/Pods-AmiiboMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		C640CD20FAAA1D8831264B24 /* Pods_AppAmiibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAmiibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3C9C289A7B933E0C36E97B0 /* Pods_AmiiboMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmiiboMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7D4AF1FA4273CF5F16351A0 /* Pods-AmiiboMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmiiboMVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AmiiboMVVM/Pods-AmiiboMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		FB3F923684698315BA7D4C37 /* Pods-AppAmiibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAmiibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppAmiibo/Pods-AppAmiibo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A21BE6ECDCA8FB6AFB619FC /* Pods_AppAmiibo.framework in Frameworks */,
+				23A84F7E2B682571ECDEC6A8 /* Pods_AmiiboMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +113,8 @@
 			children = (
 				9B3E9B99B0A7D924B460B050 /* Pods-AppAmiibo.debug.xcconfig */,
 				FB3F923684698315BA7D4C37 /* Pods-AppAmiibo.release.xcconfig */,
+				E7D4AF1FA4273CF5F16351A0 /* Pods-AmiiboMVVM.debug.xcconfig */,
+				A1329DA44912B88CC253842C /* Pods-AmiiboMVVM.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				9814B70F20B710FD001D48D9 /* AmiiboViewModel.swift */,
+				980A94AE20BEB63E005311E1 /* CharacterCellViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -146,9 +154,9 @@
 		987B7DAB20AC5A72002CE8D5 = {
 			isa = PBXGroup;
 			children = (
-				987B7DB620AC5A72002CE8D5 /* AppAmiibo */,
-				987B7DCB20AC5A73002CE8D5 /* AppAmiiboTests */,
-				987B7DD620AC5A73002CE8D5 /* AppAmiiboUITests */,
+				987B7DB620AC5A72002CE8D5 /* AmiiboMVVM */,
+				987B7DCB20AC5A73002CE8D5 /* AmiiboMVVMTests */,
+				987B7DD620AC5A73002CE8D5 /* AmiiboMVVMUITests */,
 				987B7DB520AC5A72002CE8D5 /* Products */,
 				5B82C73B4DC2F03F1C71FD50 /* Pods */,
 				E45694A3D22332AD2AE45C12 /* Frameworks */,
@@ -158,14 +166,14 @@
 		987B7DB520AC5A72002CE8D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				987B7DB420AC5A72002CE8D5 /* AppAmiibo.app */,
-				987B7DC820AC5A73002CE8D5 /* AppAmiiboTests.xctest */,
-				987B7DD320AC5A73002CE8D5 /* AppAmiiboUITests.xctest */,
+				987B7DB420AC5A72002CE8D5 /* AmiiboMVVM.app */,
+				987B7DC820AC5A73002CE8D5 /* AmiiboMVVMTests.xctest */,
+				987B7DD320AC5A73002CE8D5 /* AmiiboMVVMUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		987B7DB620AC5A72002CE8D5 /* AppAmiibo */ = {
+		987B7DB620AC5A72002CE8D5 /* AmiiboMVVM */ = {
 			isa = PBXGroup;
 			children = (
 				9802643620B08C4200CE954A /* View */,
@@ -177,25 +185,25 @@
 				987B7DC020AC5A73002CE8D5 /* LaunchScreen.storyboard */,
 				987B7DC320AC5A73002CE8D5 /* Info.plist */,
 			);
-			path = AppAmiibo;
+			path = AmiiboMVVM;
 			sourceTree = "<group>";
 		};
-		987B7DCB20AC5A73002CE8D5 /* AppAmiiboTests */ = {
+		987B7DCB20AC5A73002CE8D5 /* AmiiboMVVMTests */ = {
 			isa = PBXGroup;
 			children = (
-				987B7DCC20AC5A73002CE8D5 /* AppAmiiboTests.swift */,
+				987B7DCC20AC5A73002CE8D5 /* AmiiboMVVMTests.swift */,
 				987B7DCE20AC5A73002CE8D5 /* Info.plist */,
 			);
-			path = AppAmiiboTests;
+			path = AmiiboMVVMTests;
 			sourceTree = "<group>";
 		};
-		987B7DD620AC5A73002CE8D5 /* AppAmiiboUITests */ = {
+		987B7DD620AC5A73002CE8D5 /* AmiiboMVVMUITests */ = {
 			isa = PBXGroup;
 			children = (
-				987B7DD720AC5A73002CE8D5 /* AppAmiiboUITests.swift */,
+				987B7DD720AC5A73002CE8D5 /* AmiiboMVVMUITests.swift */,
 				987B7DD920AC5A73002CE8D5 /* Info.plist */,
 			);
-			path = AppAmiiboUITests;
+			path = AmiiboMVVMUITests;
 			sourceTree = "<group>";
 		};
 		987B7DE720AC6399002CE8D5 /* Service */ = {
@@ -213,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				C640CD20FAAA1D8831264B24 /* Pods_AppAmiibo.framework */,
+				D3C9C289A7B933E0C36E97B0 /* Pods_AmiiboMVVM.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -220,9 +229,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		987B7DB320AC5A72002CE8D5 /* AppAmiibo */ = {
+		987B7DB320AC5A72002CE8D5 /* AmiiboMVVM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 987B7DDC20AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AppAmiibo" */;
+			buildConfigurationList = 987B7DDC20AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AmiiboMVVM" */;
 			buildPhases = (
 				A54324788E36A948318C5583 /* [CP] Check Pods Manifest.lock */,
 				987B7DB020AC5A72002CE8D5 /* Sources */,
@@ -234,14 +243,14 @@
 			);
 			dependencies = (
 			);
-			name = AppAmiibo;
+			name = AmiiboMVVM;
 			productName = AppAmiibo;
-			productReference = 987B7DB420AC5A72002CE8D5 /* AppAmiibo.app */;
+			productReference = 987B7DB420AC5A72002CE8D5 /* AmiiboMVVM.app */;
 			productType = "com.apple.product-type.application";
 		};
-		987B7DC720AC5A73002CE8D5 /* AppAmiiboTests */ = {
+		987B7DC720AC5A73002CE8D5 /* AmiiboMVVMTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 987B7DDF20AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AppAmiiboTests" */;
+			buildConfigurationList = 987B7DDF20AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AmiiboMVVMTests" */;
 			buildPhases = (
 				987B7DC420AC5A73002CE8D5 /* Sources */,
 				987B7DC520AC5A73002CE8D5 /* Frameworks */,
@@ -252,14 +261,14 @@
 			dependencies = (
 				987B7DCA20AC5A73002CE8D5 /* PBXTargetDependency */,
 			);
-			name = AppAmiiboTests;
+			name = AmiiboMVVMTests;
 			productName = AppAmiiboTests;
-			productReference = 987B7DC820AC5A73002CE8D5 /* AppAmiiboTests.xctest */;
+			productReference = 987B7DC820AC5A73002CE8D5 /* AmiiboMVVMTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		987B7DD220AC5A73002CE8D5 /* AppAmiiboUITests */ = {
+		987B7DD220AC5A73002CE8D5 /* AmiiboMVVMUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 987B7DE220AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AppAmiiboUITests" */;
+			buildConfigurationList = 987B7DE220AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AmiiboMVVMUITests" */;
 			buildPhases = (
 				987B7DCF20AC5A73002CE8D5 /* Sources */,
 				987B7DD020AC5A73002CE8D5 /* Frameworks */,
@@ -270,9 +279,9 @@
 			dependencies = (
 				987B7DD520AC5A73002CE8D5 /* PBXTargetDependency */,
 			);
-			name = AppAmiiboUITests;
+			name = AmiiboMVVMUITests;
 			productName = AppAmiiboUITests;
-			productReference = 987B7DD320AC5A73002CE8D5 /* AppAmiiboUITests.xctest */;
+			productReference = 987B7DD320AC5A73002CE8D5 /* AmiiboMVVMUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -298,7 +307,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 987B7DAF20AC5A72002CE8D5 /* Build configuration list for PBXProject "AppAmiibo" */;
+			buildConfigurationList = 987B7DAF20AC5A72002CE8D5 /* Build configuration list for PBXProject "AmiiboMVVM" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -311,9 +320,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				987B7DB320AC5A72002CE8D5 /* AppAmiibo */,
-				987B7DC720AC5A73002CE8D5 /* AppAmiiboTests */,
-				987B7DD220AC5A73002CE8D5 /* AppAmiiboUITests */,
+				987B7DB320AC5A72002CE8D5 /* AmiiboMVVM */,
+				987B7DC720AC5A73002CE8D5 /* AmiiboMVVMTests */,
+				987B7DD220AC5A73002CE8D5 /* AmiiboMVVMUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -357,7 +366,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppAmiibo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AmiiboMVVM-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -370,7 +379,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AppAmiibo/Pods-AppAmiibo-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-AmiiboMVVM/Pods-AmiiboMVVM-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -379,7 +388,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppAmiibo/Pods-AppAmiibo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AmiiboMVVM/Pods-AmiiboMVVM-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -402,6 +411,7 @@
 				987B7DE920AC66D3002CE8D5 /* NetworkDispatcher.swift in Sources */,
 				9812814520AF3A3000C7E2EC /* CharacterList.swift in Sources */,
 				987B7DB820AC5A72002CE8D5 /* AppDelegate.swift in Sources */,
+				980A94AF20BEB63E005311E1 /* CharacterCellViewModel.swift in Sources */,
 				9801C94220ADDB0900880785 /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,7 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				987B7DCD20AC5A73002CE8D5 /* AppAmiiboTests.swift in Sources */,
+				987B7DCD20AC5A73002CE8D5 /* AmiiboMVVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				987B7DD820AC5A73002CE8D5 /* AppAmiiboUITests.swift in Sources */,
+				987B7DD820AC5A73002CE8D5 /* AmiiboMVVMUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,12 +437,12 @@
 /* Begin PBXTargetDependency section */
 		987B7DCA20AC5A73002CE8D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 987B7DB320AC5A72002CE8D5 /* AppAmiibo */;
+			target = 987B7DB320AC5A72002CE8D5 /* AmiiboMVVM */;
 			targetProxy = 987B7DC920AC5A73002CE8D5 /* PBXContainerItemProxy */;
 		};
 		987B7DD520AC5A73002CE8D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 987B7DB320AC5A72002CE8D5 /* AppAmiibo */;
+			target = 987B7DB320AC5A72002CE8D5 /* AmiiboMVVM */;
 			targetProxy = 987B7DD420AC5A73002CE8D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -573,17 +583,17 @@
 		};
 		987B7DDD20AC5A73002CE8D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B3E9B99B0A7D924B460B050 /* Pods-AppAmiibo.debug.xcconfig */;
+			baseConfigurationReference = E7D4AF1FA4273CF5F16351A0 /* Pods-AmiiboMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWLLZPW86Q;
-				INFOPLIST_FILE = AppAmiibo/Info.plist;
+				INFOPLIST_FILE = AmiiboMVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = gac.AppAmiibo;
+				PRODUCT_BUNDLE_IDENTIFIER = gac.AmiiboMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -592,17 +602,17 @@
 		};
 		987B7DDE20AC5A73002CE8D5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB3F923684698315BA7D4C37 /* Pods-AppAmiibo.release.xcconfig */;
+			baseConfigurationReference = A1329DA44912B88CC253842C /* Pods-AmiiboMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWLLZPW86Q;
-				INFOPLIST_FILE = AppAmiibo/Info.plist;
+				INFOPLIST_FILE = AmiiboMVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = gac.AppAmiibo;
+				PRODUCT_BUNDLE_IDENTIFIER = gac.AmiiboMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -616,17 +626,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWLLZPW86Q;
-				INFOPLIST_FILE = AppAmiiboTests/Info.plist;
+				INFOPLIST_FILE = AmiiboMVVMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = gac.AppAmiiboTests;
+				PRODUCT_BUNDLE_IDENTIFIER = gac.AmiiboMVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppAmiibo.app/AppAmiibo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmiiboMVVM.app/AmiiboMVVM";
 			};
 			name = Debug;
 		};
@@ -637,17 +647,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWLLZPW86Q;
-				INFOPLIST_FILE = AppAmiiboTests/Info.plist;
+				INFOPLIST_FILE = AmiiboMVVMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = gac.AppAmiiboTests;
+				PRODUCT_BUNDLE_IDENTIFIER = gac.AmiiboMVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppAmiibo.app/AppAmiibo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmiiboMVVM.app/AmiiboMVVM";
 			};
 			name = Release;
 		};
@@ -657,17 +667,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWLLZPW86Q;
-				INFOPLIST_FILE = AppAmiiboUITests/Info.plist;
+				INFOPLIST_FILE = AmiiboMVVMUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = gac.AppAmiiboUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = gac.AmiiboMVVMUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AppAmiibo;
+				TEST_TARGET_NAME = AmiiboMVVM;
 			};
 			name = Debug;
 		};
@@ -677,24 +687,24 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWLLZPW86Q;
-				INFOPLIST_FILE = AppAmiiboUITests/Info.plist;
+				INFOPLIST_FILE = AmiiboMVVMUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = gac.AppAmiiboUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = gac.AmiiboMVVMUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AppAmiibo;
+				TEST_TARGET_NAME = AmiiboMVVM;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		987B7DAF20AC5A72002CE8D5 /* Build configuration list for PBXProject "AppAmiibo" */ = {
+		987B7DAF20AC5A72002CE8D5 /* Build configuration list for PBXProject "AmiiboMVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				987B7DDA20AC5A73002CE8D5 /* Debug */,
@@ -703,7 +713,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		987B7DDC20AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AppAmiibo" */ = {
+		987B7DDC20AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AmiiboMVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				987B7DDD20AC5A73002CE8D5 /* Debug */,
@@ -712,7 +722,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		987B7DDF20AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AppAmiiboTests" */ = {
+		987B7DDF20AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AmiiboMVVMTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				987B7DE020AC5A73002CE8D5 /* Debug */,
@@ -721,7 +731,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		987B7DE220AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AppAmiiboUITests" */ = {
+		987B7DE220AC5A73002CE8D5 /* Build configuration list for PBXNativeTarget "AmiiboMVVMUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				987B7DE320AC5A73002CE8D5 /* Debug */,

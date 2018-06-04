@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62A1FA5F2667893B95FD19B8717BD679"
-               BuildableName = "Pods_AppAmiibo.framework"
-               BlueprintName = "Pods-AppAmiibo"
+               BlueprintIdentifier = "48AA73E8F343F19D798214C5BCFEEE66"
+               BuildableName = "Pods_AmiiboMVVM.framework"
+               BlueprintName = "Pods-AmiiboMVVM"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62A1FA5F2667893B95FD19B8717BD679"
-            BuildableName = "Pods_AppAmiibo.framework"
-            BlueprintName = "Pods-AppAmiibo"
+            BlueprintIdentifier = "48AA73E8F343F19D798214C5BCFEEE66"
+            BuildableName = "Pods_AmiiboMVVM.framework"
+            BlueprintName = "Pods-AmiiboMVVM"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

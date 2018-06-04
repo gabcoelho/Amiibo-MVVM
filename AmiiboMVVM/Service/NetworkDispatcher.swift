@@ -1,6 +1,6 @@
 //
 //  NetworkNetworkDispatcher.swift
-//  AppAmiibo
+//  AmiiboMVVM
 //
 //  Created by Gabriela Coelho on 16/05/18.
 //  Copyright © 2018 Gabriela Coelho. All rights reserved.
@@ -18,6 +18,8 @@ class NetworkDispatcher {
     
     static let shared = NetworkDispatcher()
 
+    // MARK: -
+    
     func createHTTPRequest(httpMethod: HTTPMethod, url: URL, parameters: Data?) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue

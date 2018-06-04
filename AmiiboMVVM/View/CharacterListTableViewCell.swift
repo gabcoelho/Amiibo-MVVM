@@ -1,6 +1,6 @@
 //
 //  CharacterListTableViewCell.swift
-//  AppAmiibo
+//  AmiiboMVVM
 //
 //  Created by Gabriela Coelho on 19/05/18.
 //  Copyright © 2018 Gabriela Coelho. All rights reserved.
@@ -17,9 +17,8 @@ class CharacterListTableViewCell: UITableViewCell {
 
     // MARK: - ConfigureCellData
     
-    func configureCell(character: Character) {
-        let url = URL(string: character.imagePath)
-        characterImageTableViewCell.kf.setImage(with: url)
+    func configureCell(character: CharacterCellViewModel) {
+        characterImageTableViewCell.kf.setImage(with: character.image)
         characterNameTableViewCell.text = character.name
     }
 }

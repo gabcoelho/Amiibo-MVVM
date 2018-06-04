@@ -1,6 +1,6 @@
 //
 //  AmiiboCollectionViewController.swift
-//  AppAmiibo
+//  AmiiboMVVM
 //
 //  Created by Gabriela Coelho on 21/05/18.
 //  Copyright © 2018 Gabriela Coelho. All rights reserved.
@@ -82,7 +82,6 @@ extension AmiiboCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
     
 }
-
 
 
 

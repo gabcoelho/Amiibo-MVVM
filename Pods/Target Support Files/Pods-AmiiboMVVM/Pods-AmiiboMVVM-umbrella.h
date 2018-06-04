@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_AppAmiiboVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_AppAmiiboVersionString[];
+FOUNDATION_EXPORT double Pods_AmiiboMVVMVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_AmiiboMVVMVersionString[];
 

@@ -1,6 +1,6 @@
 //
 //  AmiiboTableViewController.swift
-//  AppAmiibo
+//  AmiiboMVVM
 //
 //  Created by Gabriela Coelho on 21/05/18.
 //  Copyright © 2018 Gabriela Coelho. All rights reserved.
@@ -19,8 +19,6 @@ protocol AmiiboTableViewControllerDelegate {
     func amiiboTableViewControllerDelegate(_ amiiboTableViewController: AmiiboTableViewController, tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 }
 
-
-
 class AmiiboTableViewController: UIViewController {
     
     // MARK: - Properties
@@ -30,7 +28,7 @@ class AmiiboTableViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet private weak var charactersListTableView: UITableView!
+    @IBOutlet weak var charactersListTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,11 +58,13 @@ extension AmiiboTableViewController: UITableViewDelegate {
     
 }
 
+// MARK: - UITableView Height
 
-
-
-
-
+extension AmiiboTableViewController {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 66.0
+    }
+}
 
 
 

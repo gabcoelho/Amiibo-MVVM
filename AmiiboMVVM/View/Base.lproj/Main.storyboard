@@ -14,7 +14,7 @@
         <!--Amiibo View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier=" " id="BYZ-38-t0r" customClass="AmiiboViewController" customModule="AppAmiibo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier=" " id="BYZ-38-t0r" customClass="AmiiboViewController" customModule="AmiiboMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,10 +151,10 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="ulh-WW-4lO" id="uTZ-3W-uca"/>
-                        <outlet property="characterAmiiboSeriesLabel" destination="nbN-gd-PIL" id="4lh-aI-sbj"/>
-                        <outlet property="characterGameSeriesLabel" destination="sH8-SH-1no" id="zvh-UQ-yaJ"/>
-                        <outlet property="characterImage" destination="OSm-1u-cRB" id="eDE-UQ-Upf"/>
-                        <outlet property="characterNameLabel" destination="n5C-3U-ztT" id="HKO-bE-10a"/>
+                        <outlet property="characterAmiiboSeriesLabel" destination="nbN-gd-PIL" id="AMp-8B-NSH"/>
+                        <outlet property="characterGameSeriesLabel" destination="sH8-SH-1no" id="d8b-uE-zm7"/>
+                        <outlet property="characterImage" destination="OSm-1u-cRB" id="NIh-3c-acG"/>
+                        <outlet property="characterNameLabel" destination="n5C-3U-ztT" id="LEi-0i-6fs"/>
                         <outlet property="collectionContainerView" destination="6re-Zd-iOc" id="FJu-v0-EAF"/>
                         <outlet property="segmentedControl" destination="y58-bP-AHh" id="LEu-Ae-Mn7"/>
                         <outlet property="tableContainerView" destination="hur-4P-yYA" id="bOk-LB-Sn1"/>
@@ -167,7 +167,7 @@
         <!--Amiibo Table View Controller-->
         <scene sceneID="dOf-wG-ZsH">
             <objects>
-                <viewController storyboardIdentifier="AmiiboTableViewController" id="ydh-XM-RLb" customClass="AmiiboTableViewController" customModule="AppAmiibo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AmiiboTableViewController" id="ydh-XM-RLb" customClass="AmiiboTableViewController" customModule="AmiiboMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q4b-Nc-B28">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,7 +177,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterListTableViewCell" rowHeight="66" id="r1U-5E-zUn" customClass="CharacterListTableViewCell" customModule="AppAmiibo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterListTableViewCell" rowHeight="66" id="r1U-5E-zUn" customClass="CharacterListTableViewCell" customModule="AmiiboMVVM" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r1U-5E-zUn" id="Y4c-Ey-yQQ">
@@ -233,7 +233,7 @@
         <!--Amiibo Collection View Controller-->
         <scene sceneID="m5B-GE-69e">
             <objects>
-                <viewController storyboardIdentifier="AmiiboCollectionViewController" id="7Wp-Dg-brd" customClass="AmiiboCollectionViewController" customModule="AppAmiibo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AmiiboCollectionViewController" id="7Wp-Dg-brd" customClass="AmiiboCollectionViewController" customModule="AmiiboMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gun-je-1jf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +248,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterListCollectionViewCell" id="YE0-vg-1jA" customClass="CharacterListCollectionViewCell" customModule="AppAmiibo" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterListCollectionViewCell" id="YE0-vg-1jA" customClass="CharacterListCollectionViewCell" customModule="AmiiboMVVM" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import AppAmiibo
+@testable import AmiiboMVVM
 
-class AppAmiiboTests: XCTestCase {
+class AmiiboMVVMTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

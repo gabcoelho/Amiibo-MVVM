@@ -1,6 +1,6 @@
 //
 //  AmiiboViewModel.swift
-//  AppAmiibo
+//  AmiiboMVVM
 //
 //  Created by Gabriela Coelho on 24/05/18.
 //  Copyright © 2018 Gabriela Coelho. All rights reserved.
@@ -10,15 +10,33 @@ import Foundation
 
 class AmiiboViewModel {
 
+    // MARK: - Properties
+    
+    var characterSelected: Character?
     var characters = [Character]()
     
-    // MARK: - Getting Data
+    // MARK: - Closures
     
-    func loadCharacters(viewModel: AmiiboViewModel, success: @escaping (_ response: AmiiboViewModel?) -> Void) {
+    var updateLoadingStatus: (() -> ())?
+
+    var isLoading: Bool = false{
+        didSet {
+            self.updateLoadingStatus?()
+        }
+    }
+    
+    var cellViewModel: [CharacterCellViewModel] = [CharacterCellViewModel]()
+
+    
+    // MARK: - Getting Data
+
+    func loadCharacters() {
+        self.isLoading = true
         listOfCharacters(success: {(response) in
             if let response = response {
-                viewModel.characters = response
-                success(viewModel)
+                self.characters = response
+                self.isLoading = false
+                self.processFetchedCharacter(character: self.characters)
             } else {
                 debugPrint("dafuq")
             }
@@ -26,7 +44,6 @@ class AmiiboViewModel {
             debugPrint("completion?")
         })
     }
-    
     
     func listOfCharacters(success: @escaping (_ response: [Character]?) -> Void,
                           completion: (() -> Void)? = nil){
@@ -41,4 +58,32 @@ class AmiiboViewModel {
         }
     )}
     
+    // MARK: - Init
+    
+    func initFetch() {
+        loadCharacters()
+    }
+    
+    
+    // MARK: - DataSource
+    
+    func getSelectedAmiibo(at indexPath: IndexPath) -> CharacterCellViewModel {
+        return cellViewModel[indexPath.row]
+    }
+    
+    func numberOfCells() -> Int {
+        return cellViewModel.count
+    }
+    
+    func processFetchedCharacter(character: [Character] ) {
+        self.characters = character
+        var arrayOfCharactersCells = [CharacterCellViewModel]()
+        for character in characters {
+            arrayOfCharactersCells.append(createCellViewModel(character: character))
+        }
+        self.cellViewModel = arrayOfCharactersCells
+    }
+
 }
+
+
