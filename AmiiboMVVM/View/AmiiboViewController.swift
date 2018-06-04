@@ -15,10 +15,7 @@ import Kingfisher
 class AmiiboViewController: UIViewController{
 
     // MARK: - Properties
-    
-    var character: Character!
-    var characters = [Character]()
-    
+    var viewModel = AmiiboViewModel()
     
     // MARK: - IBOutlets
     
@@ -40,12 +37,18 @@ class AmiiboViewController: UIViewController{
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    
     func setup(){
-        loadCharacters()
-        while self.characters.count == 0 {
+        AmiiboViewModel().loadCharacters(viewModel: viewModel, success: {(response) in
+            if let response = response {
+                self.viewModel = response
+            } else {
+                debugPrint("Error loadCharacters")
+            }
+        })
+        while viewModel.characters.count == 0 {
             self.activityIndicator.isHidden = false
             self.activityIndicator.startAnimating()
         }
@@ -53,39 +56,12 @@ class AmiiboViewController: UIViewController{
         self.activityIndicator.stopAnimating()
     }
     
-    // MARK: - Getting Data
     
-    func loadCharacters(){
-        listOfCharacters(success: {(response) in
-            if let response = response {
-                self.characters = response
-            } else {
-                debugPrint("dafuq")
-            }
-        }, completion: {
-            debugPrint("completion?")
-        })
-    }
-    
-    
-    func listOfCharacters(success: @escaping (_ response: [Character]?) -> Void,
-                          completion: (() -> Void)? = nil){
-        AmiiboService().getAmiiboList(completionHandler: { (_ response: [Character]?, _ errorService: ServiceError?) in
-            if let response = response {
-                self.characters = response
-                success(response)
-            } else {
-                debugPrint("no characters")
-            }
-            completion?()
-        }
-    )}
-  
-    func updateViewControllerData(character: Character) {
-        characterNameLabel.text = character.name
-        characterAmiiboSeriesLabel.text = character.amiiboSeries
-        characterGameSeriesLabel.text = character.gameSeries
-        let url = URL(string: character.imagePath)
+    func bindDataViewController(indexPath: IndexPath, viewModel: AmiiboViewModel) {
+        characterNameLabel.text = viewModel.characters[indexPath.row].name
+        characterAmiiboSeriesLabel.text = viewModel.characters[indexPath.row].amiiboSeries
+        characterGameSeriesLabel.text = viewModel.characters[indexPath.row].gameSeries
+        let url = URL(string: viewModel.characters[indexPath.row].imagePath)
         characterImage.kf.setImage(with: url)
     }
     
@@ -130,8 +106,8 @@ extension AmiiboViewController: AmiiboTableViewControllerDataSource {
     
     func amiiboTableViewControllerDataSource(_ amiiboTableViewController: AmiiboTableViewController, tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterListTableViewCell", for: indexPath) as? CharacterListTableViewCell{
-            let c = self.characters[indexPath.row]
-            cell.configureCell(character: c)
+            let character = viewModel.characters[indexPath.row]
+            cell.configureCell(character: character)
             return cell
         } else {
             return UITableViewCell()
@@ -139,7 +115,7 @@ extension AmiiboViewController: AmiiboTableViewControllerDataSource {
     }
     
     func amiiboTableViewControllerDataSource(_ amiiboTableViewController: AmiiboTableViewController, tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return characters.count
+        return viewModel.characters.count
     }
 }
 
@@ -148,8 +124,7 @@ extension AmiiboViewController: AmiiboTableViewControllerDataSource {
 extension AmiiboViewController: AmiiboTableViewControllerDelegate {
 
     func amiiboTableViewControllerDelegate(_ amiiboTableViewController: AmiiboTableViewController, tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let character = characters[indexPath.row]
-        updateViewControllerData(character: character)
+        bindDataViewController(indexPath: indexPath, viewModel: viewModel)
     }
 }
 
@@ -158,13 +133,13 @@ extension AmiiboViewController: AmiiboTableViewControllerDelegate {
 
 extension AmiiboViewController: AmiiboCollectionViewControllerDataSource {
     func amiiboCollectionViewControllerDataSource(_ amiiboCollectionViewController: AmiiboCollectionViewController, collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return characters.count
+        return viewModel.characters.count
     }
     
     func amiiboCollectionViewControllerDataSource(_ amiiboCollectionViewController: AmiiboCollectionViewController, collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterListCollectionViewCell", for: indexPath) as? CharacterListCollectionViewCell{
-            let c = characters[indexPath.row]
-            cell.configureCell(character: c)
+            let character = viewModel.characters[indexPath.row]
+            cell.configureCell(character: character)
             return cell
         }
         return UICollectionViewCell()
@@ -176,17 +151,10 @@ extension AmiiboViewController: AmiiboCollectionViewControllerDataSource {
 
 extension AmiiboViewController: AmiiboCollectionViewControllerDelegate {
     func amiiboCollectionViewControllerDelegate(_ amiiboCollectionViewController: AmiiboCollectionViewController, collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        let character = characters[indexPath.row]
-        updateViewControllerData(character: character)
+        bindDataViewController(indexPath: indexPath, viewModel: viewModel)
     }
 
 }
-
-
-
-
-
-
 
 
 
