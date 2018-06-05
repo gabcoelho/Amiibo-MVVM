@@ -18,14 +18,14 @@ class AmiiboViewController: UIViewController{
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var characterImage: UIImageView!
-    @IBOutlet weak var characterNameLabel: UILabel!
-    @IBOutlet weak var characterGameSeriesLabel: UILabel!
-    @IBOutlet weak var characterAmiiboSeriesLabel: UILabel!
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
-    @IBOutlet weak var tableContainerView: UIView!
-    @IBOutlet weak var collectionContainerView: UIView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var characterImage: UIImageView!
+    @IBOutlet private weak var characterNameLabel: UILabel!
+    @IBOutlet private weak var characterGameSeriesLabel: UILabel!
+    @IBOutlet private weak var characterAmiiboSeriesLabel: UILabel!
+    @IBOutlet private weak var segmentedControl: UISegmentedControl!
+    @IBOutlet private weak var tableContainerView: UIView!
+    @IBOutlet private weak var collectionContainerView: UIView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {

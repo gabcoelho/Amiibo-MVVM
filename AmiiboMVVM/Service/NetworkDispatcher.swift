@@ -24,26 +24,26 @@ class NetworkDispatcher {
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
         if let parameters = parameters {
+            request.httpBody = parameters
             _ = JSON.deserialize(data: parameters)
         }
         return request
     }
 
-    func dispatch(_ urlRequest: URLRequest, completionHandler: @escaping (_ data: Data?) -> Void) -> Void {
+    internal func dispatch(_ urlRequest: URLRequest, completionHandler: @escaping (_ data: Data?, _ errorService: ServiceError) -> Void) -> Void {
         let request = urlRequest
         let task = URLSession.shared.dataTask(with: request) {
             data, res, error in
             guard(error == nil) else {
-                completionHandler(nil)
+                completionHandler(nil, ServiceError.requestError)
                 return
             }
             guard let data = data else {
-                completionHandler(nil)
+                completionHandler(nil, ServiceError.unableToDecode)
                 return
             }
-            completionHandler(data)
+            completionHandler(data, ServiceError.sucess)
         }
-
         task.resume()
     }
 
@@ -51,7 +51,7 @@ class NetworkDispatcher {
         let request = urlRequest
 
         dispatch(request) {
-            (data) in
+            (data, error) in
 
             if let data = data {
                 do {

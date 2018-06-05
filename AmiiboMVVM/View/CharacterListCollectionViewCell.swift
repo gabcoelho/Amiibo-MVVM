@@ -12,8 +12,8 @@ class CharacterListCollectionViewCell: UICollectionViewCell {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var characterNameCollectionViewCell: UILabel!
-    @IBOutlet weak var characterImageCollectionViewCell: UIImageView!
+    @IBOutlet private weak var characterNameCollectionViewCell: UILabel!
+    @IBOutlet private weak var characterImageCollectionViewCell: UIImageView!
     
     // MARK: - ConfigureCellData
     

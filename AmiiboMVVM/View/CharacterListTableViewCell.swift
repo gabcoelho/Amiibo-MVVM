@@ -12,8 +12,8 @@ class CharacterListTableViewCell: UITableViewCell {
 
     //MARK: - IBOutlets
     
-    @IBOutlet weak var characterNameTableViewCell: UILabel!
-    @IBOutlet weak var characterImageTableViewCell: UIImageView!
+    @IBOutlet private weak var characterNameTableViewCell: UILabel!
+    @IBOutlet private weak var characterImageTableViewCell: UIImageView!
 
     // MARK: - ConfigureCellData
     

@@ -11,11 +11,6 @@ import Kingfisher
 
 
 class AmiiboService {
-        
-    var character: Character!
-    var charactersList = CharacterList()
-    var characters = [Character]()
-    var errorService: ServiceError?
 
     func getAmiiboList(completionHandler: @escaping (_ response: [Character]?, _ errorService: ServiceError?) -> Void) {
         
@@ -27,7 +22,6 @@ class AmiiboService {
         
         NetworkDispatcher.shared.dispatchResponse(urlRequest, completionHandler: { (_ result: CharacterList?, _ errorService: ServiceError?) in
             if let result = result {
-                self.charactersList = result
                 completionHandler(result.characters, nil)
             } else {
                 completionHandler(nil, errorService)

@@ -14,25 +14,24 @@ class AmiiboViewModel {
     
     var characterSelected: Character?
     var characters = [Character]()
-    
+    var cellViewModel: [CharacterCellViewModel] = [CharacterCellViewModel]()
+
     // MARK: - Closures
     
     var updateLoadingStatus: (() -> ())?
-
+    
     var isLoading: Bool = false{
         didSet {
             self.updateLoadingStatus?()
         }
     }
-    
-    var cellViewModel: [CharacterCellViewModel] = [CharacterCellViewModel]()
 
     
     // MARK: - Getting Data
 
-    func loadCharacters() {
+    private func loadCharacters() {
         self.isLoading = true
-        listOfCharacters(success: {(response) in
+        fetchListOfCharacters(success: {(response) in
             if let response = response {
                 self.characters = response
                 self.isLoading = false
@@ -45,7 +44,7 @@ class AmiiboViewModel {
         })
     }
     
-    func listOfCharacters(success: @escaping (_ response: [Character]?) -> Void,
+    private func fetchListOfCharacters(success: @escaping (_ response: [Character]?) -> Void,
                           completion: (() -> Void)? = nil){
         AmiiboService().getAmiiboList(completionHandler: { (_ response: [Character]?, _ errorService: ServiceError?) in
             if let response = response {
