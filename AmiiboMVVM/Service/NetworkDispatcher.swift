@@ -18,7 +18,7 @@ class NetworkDispatcher {
     
     static let shared = NetworkDispatcher()
 
-    // MARK: -
+    // MARK: - HTTPRequest
     
     func createHTTPRequest(httpMethod: HTTPMethod, url: URL, parameters: Data?) -> URLRequest {
         var request = URLRequest(url: url)
@@ -29,7 +29,9 @@ class NetworkDispatcher {
         }
         return request
     }
-
+    
+    // MARK: - Dispatch Request
+    
     internal func dispatch(_ urlRequest: URLRequest, completionHandler: @escaping (_ data: Data?, _ errorService: ServiceError) -> Void) -> Void {
         let request = urlRequest
         let task = URLSession.shared.dataTask(with: request) {
