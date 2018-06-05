@@ -74,7 +74,7 @@ class AmiiboViewModel {
         return cellViewModel.count
     }
     
-    func processFetchedCharacter(character: [Character] ) {
+    private func processFetchedCharacter(character: [Character] ) {
         self.characters = character
         var arrayOfCharactersCells = [CharacterCellViewModel]()
         for character in characters {
