@@ -51,7 +51,6 @@ class AmiiboViewModel {
                 self.characters = response
                 success(response)
             } else {
-                debugPrint("no characters")
             }
             completion?()
         }
